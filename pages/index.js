@@ -6,6 +6,7 @@ function Home({ technologies, services }) {
       {technologies.map(technology => (
         <div style={{width: '300px'}}>
           <Image 
+            key={technology.id}
             src={technology.thumbnail.url} 
             width={254}
             height={254}
@@ -18,7 +19,8 @@ function Home({ technologies, services }) {
       <div style={{display: 'flex', marginTop: '32px'}}>
         {services.map(service => (
           <div style={{width: '300px'}}>
-            <Image             
+            <Image           
+              key={service.id}  
               src={service.thumbnail.url} 
               width={254} 
               height={254} 
